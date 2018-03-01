@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Container_for_Switching_Views" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q3c-Pt-TuL">
+                                <rect key="frame" x="16" y="70" width="343" height="577"/>
+                                <connections>
+                                    <segue destination="X4H-iF-fbk" kind="embed" identifier="goToFirst" id="2bz-OI-PzK"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JkH-ij-GRD">
+                                <rect key="frame" x="16" y="70" width="343" height="577"/>
+                                <connections>
+                                    <segue destination="P0T-pC-YTi" kind="embed" identifier="goToSecond" id="sHz-mz-PEU"/>
+                                </connections>
+                            </containerView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="byM-e7-a50">
+                                <rect key="frame" x="127" y="35" width="121" height="29"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentedControlSelected:" destination="BYZ-38-t0r" eventType="valueChanged" id="hPx-3a-CDa"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JkH-ij-GRD" secondAttribute="trailing" constant="16" id="7ag-Dg-fIa"/>
+                            <constraint firstItem="byM-e7-a50" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="EET-fj-gTa"/>
+                            <constraint firstItem="JkH-ij-GRD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="FuP-yx-iDc"/>
+                            <constraint firstItem="Q3c-Pt-TuL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="GyY-1J-Wm3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="JkH-ij-GRD" secondAttribute="bottom" constant="20" id="OxT-cF-cFC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Q3c-Pt-TuL" secondAttribute="trailing" constant="16" id="VDa-ZT-AkW"/>
+                            <constraint firstItem="byM-e7-a50" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="b4n-BT-2V1"/>
+                            <constraint firstItem="JkH-ij-GRD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="gig-FP-qMm"/>
+                            <constraint firstItem="Q3c-Pt-TuL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="hoY-Xw-i3D"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Q3c-Pt-TuL" secondAttribute="bottom" constant="20" id="ran-Aq-SMc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="goToFirstVC" destination="Q3c-Pt-TuL" id="og6-9W-ORC"/>
+                        <outlet property="goToSecondVC" destination="JkH-ij-GRD" id="CRd-OB-19f"/>
+                        <outlet property="segmentedControl" destination="byM-e7-a50" id="TOU-rm-2ih"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-79.200000000000003" y="133.5832083958021"/>
+        </scene>
+        <!--First View Controller-->
+        <scene sceneID="ZgM-yj-oZD">
+            <objects>
+                <viewController id="X4H-iF-fbk" customClass="FirstViewController" customModule="Container_for_Switching_Views" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ucr-qU-5Ag">
+                        <rect key="frame" x="0.0" y="0.0" width="343" height="577"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hvM-wd-lgy">
+                                <rect key="frame" x="132" y="153" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hvM-wd-lgy" firstAttribute="centerX" secondItem="ucr-qU-5Ag" secondAttribute="centerX" id="6JR-VU-cSD"/>
+                            <constraint firstItem="hvM-wd-lgy" firstAttribute="centerY" secondItem="ucr-qU-5Ag" secondAttribute="centerY" id="QZF-cY-fz2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="hvM-wd-lgy" id="4iS-wC-nPs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rEa-R3-QpB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="662" y="18"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="lJX-lo-WgQ">
+            <objects>
+                <viewController id="P0T-pC-YTi" customClass="SecondViewController" customModule="Container_for_Switching_Views" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5CJ-Gq-UPJ">
+                        <rect key="frame" x="0.0" y="0.0" width="343" height="577"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NAq-df-KJx">
+                                <rect key="frame" x="120" y="166" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="NAq-df-KJx" firstAttribute="centerY" secondItem="5CJ-Gq-UPJ" secondAttribute="centerY" id="paP-VE-pMk"/>
+                            <constraint firstItem="NAq-df-KJx" firstAttribute="centerX" secondItem="5CJ-Gq-UPJ" secondAttribute="centerX" id="vnf-bf-8n4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="NAq-df-KJx" id="0Bh-aL-tbI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eFd-p0-6m2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="642" y="691"/>
+        </scene>
+    </scenes>
+</document>
