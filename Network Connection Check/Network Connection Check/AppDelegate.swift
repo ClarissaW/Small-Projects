@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  Tutorial and AppVersion
+//  Network Connection Check
 //
-//  Created by Wang, Zewen on 2018-02-28.
+//  Created by Wang, Zewen on 2018-03-19.
 //  Copyright © 2018 Wang, Zewen. All rights reserved.
 //
 
@@ -16,26 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        // Get current app Version
-        let userDefaults = UserDefaults.standard
-        let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-        if let isFirstStart = userDefaults.value(forKey: "isFirstLaunch") as? Bool {
-            print("This is not the first launch")
-            
-            let vc : ViewController = mainStoryboard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
-            
-            self.window?.makeKeyAndVisible()
-            self.window?.rootViewController? = vc
-        } else {
-            print("this is the first launch")
-            UserDefaults.standard.set(false, forKey: "isFirstLaunch")
-            UserDefaults.standard.synchronize()
-            let vc : TutorialViewController = mainStoryboard.instantiateViewController(withIdentifier: "TutorialViewController") as! TutorialViewController
-            
-            self.window?.makeKeyAndVisible()
-            self.window?.rootViewController = vc
-            
-        }
         return true
     }
 

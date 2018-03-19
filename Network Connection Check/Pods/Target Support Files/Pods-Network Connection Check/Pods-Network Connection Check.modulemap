@@ -1,0 +1,6 @@
+framework module Pods_Network_Connection_Check {
+  umbrella header "Pods-Network Connection Check-umbrella.h"
+
+  export *
+  module * { export * }
+}

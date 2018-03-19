@@ -13,7 +13,7 @@
         <!--Tutorial View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="TutorialViewController" customModule="Tutorial_and_AppVersion" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TutorialViewController" id="BYZ-38-t0r" customClass="TutorialViewController" customModule="Tutorial_and_AppVersion" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -57,11 +57,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="74" y="62"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="d1H-ws-Ncx">
             <objects>
-                <viewController id="cOc-Gk-HaH" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="cOc-Gk-HaH" customClass="ViewController" customModule="Tutorial_and_AppVersion" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hfU-4C-Mdr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
