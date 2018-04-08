@@ -7,9 +7,12 @@
 //
 
 import UIKit
-
+import SystemConfiguration
 class ViewController: UIViewController {
-
+    var reachability:SCNetworkReachability?
+    var reachabilityFlag:SCNetworkConnectionFlags?
+    
+    @IBOutlet weak var connectionCheckLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		B7BD961558615C2A19B73C80 /* Pods_Network_Connection_Check.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2269DA630D62F8F5F61B1984 /* Pods_Network_Connection_Check.framework */; };
+		B85F6A51206031990035A9A3 /* CheckNetConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = B85F6A50206031980035A9A3 /* CheckNetConnection.m */; };
+		B85F6A54206031B00035A9A3 /* KKHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = B85F6A53206031B00035A9A3 /* KKHUD.m */; };
+		B85F6A57206031BB0035A9A3 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = B85F6A55206031BB0035A9A3 /* Reachability.m */; };
 		B8BA264E205FEF130048BFFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BA264D205FEF130048BFFB /* AppDelegate.swift */; };
 		B8BA2650205FEF130048BFFB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BA264F205FEF130048BFFB /* ViewController.swift */; };
 		B8BA2653205FEF130048BFFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8BA2651205FEF130048BFFB /* Main.storyboard */; };
@@ -20,6 +23,13 @@
 		1CFD44874AF5C44DCC390616 /* Pods-Network Connection Check.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Network Connection Check.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Network Connection Check/Pods-Network Connection Check.debug.xcconfig"; sourceTree = "<group>"; };
 		2269DA630D62F8F5F61B1984 /* Pods_Network_Connection_Check.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Network_Connection_Check.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		264690CD25C8262FE921DCF4 /* Pods-Network Connection Check.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Network Connection Check.release.xcconfig"; path = "Pods/Target Support Files/Pods-Network Connection Check/Pods-Network Connection Check.release.xcconfig"; sourceTree = "<group>"; };
+		B85F6A4E2060317D0035A9A3 /* CheckNetConnection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CheckNetConnection.h; sourceTree = "<group>"; };
+		B85F6A4F206031980035A9A3 /* Network Connection Check-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Network Connection Check-Bridging-Header.h"; sourceTree = "<group>"; };
+		B85F6A50206031980035A9A3 /* CheckNetConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckNetConnection.m; sourceTree = "<group>"; };
+		B85F6A52206031B00035A9A3 /* KKHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKHUD.h; sourceTree = "<group>"; };
+		B85F6A53206031B00035A9A3 /* KKHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKHUD.m; sourceTree = "<group>"; };
+		B85F6A55206031BB0035A9A3 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		B85F6A56206031BB0035A9A3 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		B8BA264A205FEF130048BFFB /* Network Connection Check.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Network Connection Check.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8BA264D205FEF130048BFFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B8BA264F205FEF130048BFFB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -80,13 +90,20 @@
 		B8BA264C205FEF130048BFFB /* Network Connection Check */ = {
 			isa = PBXGroup;
 			children = (
+				B85F6A4E2060317D0035A9A3 /* CheckNetConnection.h */,
+				B85F6A56206031BB0035A9A3 /* Reachability.h */,
+				B85F6A55206031BB0035A9A3 /* Reachability.m */,
+				B85F6A52206031B00035A9A3 /* KKHUD.h */,
+				B85F6A53206031B00035A9A3 /* KKHUD.m */,
 				B8BA264D205FEF130048BFFB /* AppDelegate.swift */,
+				B85F6A50206031980035A9A3 /* CheckNetConnection.m */,
 				B8BA264F205FEF130048BFFB /* ViewController.swift */,
 				B8BA2651205FEF130048BFFB /* Main.storyboard */,
 				B8BA2654205FEF130048BFFB /* Assets.xcassets */,
 				B8BA2656205FEF130048BFFB /* LaunchScreen.storyboard */,
 				B8BA2659205FEF130048BFFB /* Info.plist */,
 				B8BA267D205FFC7A0048BFFB /* NetworkInstance.swift */,
+				B85F6A4F206031980035A9A3 /* Network Connection Check-Bridging-Header.h */,
 			);
 			path = "Network Connection Check";
 			sourceTree = "<group>";
@@ -126,6 +143,7 @@
 				TargetAttributes = {
 					B8BA2649205FEF130048BFFB = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -220,8 +238,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B85F6A54206031B00035A9A3 /* KKHUD.m in Sources */,
+				B85F6A51206031990035A9A3 /* CheckNetConnection.m in Sources */,
 				B8BA2650205FEF130048BFFB /* ViewController.swift in Sources */,
 				B8BA267E205FFC7A0048BFFB /* NetworkInstance.swift in Sources */,
+				B85F6A57206031BB0035A9A3 /* Reachability.m in Sources */,
 				B8BA264E205FEF130048BFFB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -360,11 +381,14 @@
 			baseConfigurationReference = 1CFD44874AF5C44DCC390616 /* Pods-Network Connection Check.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Network Connection Check/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.zewen.Network-Connection-Check";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Network Connection Check/Network Connection Check-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -375,11 +399,13 @@
 			baseConfigurationReference = 264690CD25C8262FE921DCF4 /* Pods-Network Connection Check.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Network Connection Check/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.zewen.Network-Connection-Check";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Network Connection Check/Network Connection Check-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
